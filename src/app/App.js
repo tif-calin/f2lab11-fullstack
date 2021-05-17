@@ -9,6 +9,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+import CatList from '../list/CatList';
 
 class App extends Component {
 
@@ -28,7 +29,7 @@ class App extends Component {
 
               <Route path="/resources" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <CatList {...routerProps}/>
                 )}
               />
 
