@@ -10,7 +10,7 @@ export default class Home extends Component {
         <h2 className="page-title">Home</h2>
         <img src="https://placekitten.com/500/600" alt="placeholder kitten"/>
 
-        <Link to='/resources'>Show me the cats!</Link>
+        <Link to='/cats'>Show me the cats!</Link>
       </div>
     );
   }
