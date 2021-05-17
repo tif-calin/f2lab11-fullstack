@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <Header/>
-          <main>
+          <main className="wrapper-v">
 
             <Switch>
               <Route path="/" exact={true}

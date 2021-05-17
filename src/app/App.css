@@ -1,10 +1,18 @@
+@import url('../common/common.css');
+
 .App {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  justify-content: center;
+}
+
+.App .Router {
+  width: 100%;
 }
 
 main {
+  min-width: 1000px;
+  width: clamp(1000px, 1300px, 100%);
   background: #FAF0EA;
 }
-

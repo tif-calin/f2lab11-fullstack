@@ -5,9 +5,9 @@ class Header extends Component {
 
   render() { 
     return (
-      <header className="Header">
+      <header className="Header wrapper-h">
 
-        <h1>React App</h1>
+        <h1>Famous Cats</h1>
         
       </header>
     );
