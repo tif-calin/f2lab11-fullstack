@@ -24,8 +24,13 @@ export default class CatPage extends Component {
 
     return (
       <div className="CatPage">
-        <div>
+        <div className="wrapper-v">
           <h2 className="page-title">{cat.name}</h2>
+          <img src={cat.url} alt={cat.name}/>
+          <label>type: <span>{cat.type}</span></label>
+          <label>birth year: <span>{cat.year}</span></label>
+          <label>lives left: <span>{cat.lives}</span></label>
+          <label>is a sidekick?: <span>{(cat.isSidekick) ? 'Yes' : 'No'}</span></label>
         </div>
         <Link to='/cats'>&#9664; back</Link>
       </div>

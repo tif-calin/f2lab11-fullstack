@@ -5,3 +5,21 @@
   justify-content: space-between;
   padding: 2rem;
 }
+
+.CatPage > div {
+  justify-content: flex-start;
+}
+
+.CatPage label {
+  margin: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.CatPage label > span {
+  font-weight: normal;
+}
+
+.CatPage img {
+  height: 40%;
+}
