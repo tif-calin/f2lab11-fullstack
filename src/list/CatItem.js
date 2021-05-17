@@ -7,8 +7,9 @@ export default class CatItem extends Component {
     const cat = this.props.data;
 
     return (
-      <li className="CatItem">
+      <li className="CatItem wrapper-v">
         <h3>{cat.name}</h3>
+        <img src={`..${cat.url}`} alt={cat.name}/>
       </li>
     );
   }

@@ -17,9 +17,9 @@ export default class CatList extends Component {
 
   render() {
     return (
-      <div className="CatList">
-        <ul>
-          {this.state.cats.map(cat => 
+      <div className="CatList wrapper-v">
+        <ul className="wrapper-h">
+          {this.state.cats && this.state.cats.map(cat => 
             <CatItem key={cat.id} data={cat}/>
           )}
         </ul>

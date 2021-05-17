@@ -1,4 +1,14 @@
 .CatItem {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: auto;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: 1px solid black;
+}
+
+img {
+  margin-top: 0.25rem;
+  max-width: 100%;
 }
