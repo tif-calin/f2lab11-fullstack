@@ -1,0 +1,26 @@
+
+
+.wrapper-v, .wrapper-h {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-v {
+  flex-direction: column;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.back-button {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button::before {
+  content: "◀ ";
+}

@@ -1,10 +1,16 @@
+@import url('../common/common.css');
+
 .App {
   height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  justify-content: space-between;
+}
+
+.App > * {
+  width: 100%;
 }
 
 main {
+  height: 100%;
+  max-width: 1300px;
   background: #FAF0EA;
 }
-
