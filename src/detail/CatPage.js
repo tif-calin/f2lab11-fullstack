@@ -37,7 +37,10 @@ export default class CatPage extends Component {
           <label>lives left: <span>{cat.lives}</span></label>
           <label>is a sidekick?: <span>{(cat.isSidekick) ? 'Yes' : 'No'}</span></label>
         </div>
-        <button onClick={this.onDelete}>delete</button>
+        <span>
+          <button onClick={this.onDelete}>delete</button>
+          <Link to='/cats'>edit</Link>
+        </span>
         <Link className="back-button" to='/cats'>back</Link>
       </div>
     );
