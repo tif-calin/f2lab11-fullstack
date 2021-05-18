@@ -24,7 +24,7 @@ export default class CatList extends Component {
           )}
         </ul>
 
-        <Link to='/'>&#9664; back</Link>
+        <Link className="back-button" to='/'>back</Link>
       </div>
     );
   }

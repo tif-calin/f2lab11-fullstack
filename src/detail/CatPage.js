@@ -32,7 +32,7 @@ export default class CatPage extends Component {
           <label>lives left: <span>{cat.lives}</span></label>
           <label>is a sidekick?: <span>{(cat.isSidekick) ? 'Yes' : 'No'}</span></label>
         </div>
-        <Link to='/cats'>&#9664; back</Link>
+        <Link className="back-button" to='/cats'>back</Link>
       </div>
     );
   }

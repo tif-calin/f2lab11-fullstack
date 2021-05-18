@@ -1,6 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
 .Header {
-  padding: 20px;
+  padding: 1rem 0;
   border-bottom: 1px solid lightgray;
+}
+
+.Header > nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > * {
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 h1 {

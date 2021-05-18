@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .CatPage {
   display: flex;
   flex-direction: column;
@@ -10,9 +15,13 @@
   justify-content: flex-start;
 }
 
+.CatPage > a {
+  text-decoration: none;
+}
+
 .CatPage label {
   margin: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -21,5 +30,6 @@
 }
 
 .CatPage img {
-  height: 40%;
+  margin-top: 1rem;
+  height: 400px;
 }
