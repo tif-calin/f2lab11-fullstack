@@ -11,7 +11,7 @@ export default class CatItem extends Component {
       <li className="CatItem">
         <Link className="wrapper-v" to={`/cats/${cat.id}`}>
           <h3>{cat.name}</h3>
-          <img src={`..${cat.url}`} alt={cat.name}/>
+          <img src={((cat.url.substring(0, 4) === 'http') ? '' : '..') + cat.url} alt={cat.name}/>
         </Link>
       </li>
     );
