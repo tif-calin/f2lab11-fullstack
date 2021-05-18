@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getCat } from '../utils/famous-cats-api';
+import { getCat, removeCat } from '../utils/famous-cats-api';
 import './CatPage.css';
 
 export default class CatPage extends Component {
@@ -15,8 +15,13 @@ export default class CatPage extends Component {
     }
     catch (err) {
       console.log(err);
-      window.location = '/';
+      this.props.history.push('/');
     }
+  }
+
+  onDelete = async e => {
+    await removeCat(this.state.cat.id);
+    this.props.history.push('/cats/');
   }
 
   render() {
@@ -32,6 +37,7 @@ export default class CatPage extends Component {
           <label>lives left: <span>{cat.lives}</span></label>
           <label>is a sidekick?: <span>{(cat.isSidekick) ? 'Yes' : 'No'}</span></label>
         </div>
+        <button onClick={this.onDelete}>delete</button>
         <Link className="back-button" to='/cats'>back</Link>
       </div>
     );

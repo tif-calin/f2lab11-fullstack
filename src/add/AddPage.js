@@ -12,9 +12,10 @@ export default class AddPage extends Component {
     isSidekick: false
   };
 
-  onSubmit = e => {
+  onSubmit = async e => {
     e.preventDefault();
-    addCat(this.state);
+    await addCat(this.state);
+    this.props.history.push('/cats/');
   }
 
   onChange = e => {
