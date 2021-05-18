@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { getCats } from '../utils/famous-cats-api.js';
+import { addCat } from '../utils/famous-cats-api.js';
 import './AddPage.css';
 
 export default class AddPage extends Component {
@@ -12,34 +12,60 @@ export default class AddPage extends Component {
     isSidekick: false
   };
 
+  onSubmit = e => {
+    e.preventDefault();
+    addCat(this.state);
+  }
+
+  onChange = e => {
+    console.log(e.target.value);
+    const obj = {};
+    switch (e.target.type) {
+      case ('number'):
+        obj[e.target.name] = Number(e.target.value);
+        this.setState(obj);
+        break;
+      case ('text'):
+        obj[e.target.name] = e.target.value;
+        this.setState(obj);
+        break;
+      case ('checkbox'):
+        obj[e.target.name] = e.target.checked;
+        this.setState(obj);
+        break;
+      default:
+        console.log('huh?');
+    }
+  }
+
   render() {
     return (
-      <form className="AddPage wrapper-v">
+      <form onSubmit={this.onSubmit} className="AddPage wrapper-v">
         <h2 className="page-title">Add a cat</h2>
         <fieldset>
           <label>
             name:
-            <input type="text" required/>
+            <input onChange={this.onChange} name="name" type="text" required/>
           </label>
           <label>
             type:
-            <input type="text" required/>
+            <input onChange={this.onChange} name="type" type="text" required/>
           </label>
           <label>
             image:
-            <input type="text" required/>
+            <input onChange={this.onChange} name="url" type="text" required/>
           </label>
           <label>
             year:
-            <input type="number"/>
+            <input onChange={this.onChange} name="year" defaultValue="2000" type="number"/>
           </label>
           <label>
             lives:
-            <input type="number" min="0" max="9" placeholder="9"/>
+            <input onChange={this.onChange} name="lives" type="number" min="0" max="9" defaultValue="9"/>
           </label>
           <label>
             sidekick?:
-            <input type="checkbox"/>
+            <input onChange={this.onChange} name="isSidekick" type="checkbox"/>
           </label>
         </fieldset>
         <button type="submit">Add Cat</button>
