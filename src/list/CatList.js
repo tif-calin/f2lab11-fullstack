@@ -19,12 +19,13 @@ export default class CatList extends Component {
     return (
       <div className="CatList wrapper-v">
         <ul className="wrapper-h">
-          {this.state.cats && this.state.cats.map(cat => 
-            <CatItem key={cat.id} data={cat}/>
-          )}
+          {this.state.cats && this.state.cats.map(cat => <CatItem key={cat.id} data={cat}/>)}
+          <li className="add-cat">
+            <Link to="/add">+</Link>
+          </li>
         </ul>
 
-        <Link className="back-button" to='/'>back</Link>
+        <Link className="back-button" to="/">back</Link>
       </div>
     );
   }
