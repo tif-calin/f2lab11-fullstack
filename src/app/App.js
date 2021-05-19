@@ -30,13 +30,13 @@ class App extends Component {
                 )}
               />
 
+              <Route path="/cats/:id/edit" render={routerProps => <EditPage {...routerProps}/>}/>
+
               <Route path="/cats" exact={true}
                 render={routerProps => (
                   <CatList {...routerProps}/>
                 )}
               />
-
-              <Route path="/cats/:id/edit" render={routerProps => <EditPage {...routerProps}/>}/>
 
               <Route path="/cats/:id"
                 render={routerProps => (

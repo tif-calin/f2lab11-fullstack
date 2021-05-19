@@ -11,7 +11,8 @@ export default class CatPage extends Component {
 
   async componentDidMount() {
     try {
-      this.setState({ cat: (await getCat(this.props.match.params.id)) });
+      const cat = await getCat(this.props.match.params.id);
+      this.setState({ cat: cat });
     }
     catch (err) {
       console.log(err);
@@ -39,7 +40,7 @@ export default class CatPage extends Component {
         </div>
         <span>
           <button onClick={this.onDelete}>delete</button>
-          <Link to='/cats'>edit</Link>
+          <Link to={`/cats/${cat.id}/edit`}><button>edit</button></Link>
         </span>
         <Link className="back-button" to='/cats'>back</Link>
       </div>

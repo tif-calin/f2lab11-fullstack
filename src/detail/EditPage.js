@@ -1,14 +1,17 @@
 import { Component } from 'react';
+import AddPage from '../add/AddPage';
 import './EditPage.css';
 
 class EditPage extends Component {
   
-  render() { 
+  render() {
+
     return (
-      <div className="EditPage">
-        &#x1f12f; cats are for everyone
+      <div className="EditPage">        
+        <AddPage {...this.props}/>
       </div>
     );
+
   }
 }
  
