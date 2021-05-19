@@ -11,6 +11,8 @@ import {
 import './App.css';
 import CatList from '../list/CatList';
 import CatPage from '../detail/CatPage';
+import AddPage from '../add/AddPage';
+import EditPage from '../detail/EditPage';
 
 class App extends Component {
 
@@ -28,6 +30,8 @@ class App extends Component {
                 )}
               />
 
+              <Route path="/cats/:id/edit" render={routerProps => <EditPage {...routerProps}/>}/>
+
               <Route path="/cats" exact={true}
                 render={routerProps => (
                   <CatList {...routerProps}/>
@@ -38,6 +42,10 @@ class App extends Component {
                 render={routerProps => (
                   <CatPage {...routerProps}/>
                 )}
+              />
+
+              <Route path="/add" exact={true}
+                render={routerProps => <AddPage {...routerProps}/>}
               />
 
               <Redirect to="/" />

@@ -10,3 +10,26 @@
   width: 100%;
   flex-wrap: wrap;
 }
+
+.add-cat {
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  background-color: black;
+  font-size: 9rem;
+  opacity: 0.75;
+}
+
+.add-cat:hover {
+  opacity: 0.5;
+}
+
+.add-cat * {
+  line-height: 130px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
